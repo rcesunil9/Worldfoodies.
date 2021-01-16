@@ -1,0 +1,384 @@
+/*
+Theme Name: ForeTheme
+Theme URI: https://foreshop.net
+Author: David Cretu
+Author URI: http://davidcretu.com/
+Description: ForeTheme is the definitive WordPress HTML5 Bootstrap 4 theme. We've carefully constructed the most clean and minimalist theme possible for internal use. Clean, simple, unstyled, semi-minified, unformatted, and valid code, SEO-friendly, jQuery-enabled, no programmer comments, standardized and as white label as possible, and most importantly, the CSS is reset for cross-browser-compatability. Thank you!
+Version: 2020.1
+License: GNU General Public License
+License URI: https://www.gnu.org/licenses/gpl.html
+Text Domain: foretheme
+
+ForeShop WordPress Theme © 2018-2020 ForeShopGroup
+ForeTheme is distributed under the terms of the GNU GPL
+*/
+:root {
+	--main-color: #8ABB4B;
+	--transparent-main-color: #8ABB4BDD;
+	--secondary-color: #584942;
+	--logo-width: 215px;
+	--logo-height: 45px
+}
+.padding-0 {
+	padding-right: 5px;
+	padding-left: 5px
+}
+#footer h5,
+#sidebar h4,
+.category,
+.entry-title,
+.navbar,
+.post-title span,
+.recent-post a span,
+h1,
+h2,
+h3,
+h5 {
+	font-family: Oswald, sans-serif!important
+}
+.post .post-title:hover,
+.post a:hover,
+a,
+article .entry-footer,
+article .entry-footer a,
+.contact-social {
+	color: var(--main-color)
+}
+.navbar {
+	background: #f5f4f2
+}
+.current-menu-item,
+.navbar .menu-item:hover {
+	background: #00000008
+}
+.current-menu-item a {
+	color: var(--main-color)
+}
+.navbar-brand img {
+	max-width: 215px;
+	max-height: 45px
+}
+.navbar a {
+	color: var(--secondary-color);
+	text-decoration: none
+}
+.navbar li {
+	padding: 10px 15px;
+	text-transform: uppercase;
+	transition: all .4s ease
+}
+.navbar-nav>li {
+	padding: 25px 15px
+}
+
+
+.navbar .menu-item-has-children>a::after {
+	content: "";
+	width: 0;
+	height: 0;
+	display: inline-block;
+	vertical-align: middle;
+	border-style: solid;
+	border-width: .3rem .3rem 0;
+	border-right-color: transparent;
+	border-bottom-color: transparent;
+	border-left-color: transparent;
+	margin: -.2rem 0 0 .5rem
+}
+.navbar .menu-item-has-children.open .dropdown-menu {
+	display: block;
+	left: inherit;
+	margin-top: -3px;
+	margin-left: -15px
+}
+.navbar .menu-item:hover>a,
+.navbar a:hover {
+	color: var(--main-color)
+}
+.menu-item-has-children a {
+	pointer-events: none;
+}
+
+#search {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--transparent-main-color);
+	-webkit-transition: all .5s ease-in-out;
+	-moz-transition: all .5s ease-in-out;
+	-o-transition: all .5s ease-in-out;
+	-ms-transition: all .5s ease-in-out;
+	transition: all .5s ease-in-out;
+	-webkit-transform: translate(0, -100%) scale(0, 0);
+	-moz-transform: translate(0, -100%) scale(0, 0);
+	-o-transform: translate(0, -100%) scale(0, 0);
+	-ms-transform: translate(0, -100%) scale(0, 0);
+	transform: translate(0, -100%) scale(0, 0);
+	opacity: 0
+}
+#search form {
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	text-align: center
+}
+#search.open {
+	-webkit-transform: translate(0, 0) scale(1, 1);
+	-moz-transform: translate(0, 0) scale(1, 1);
+	-o-transform: translate(0, 0) scale(1, 1);
+	-ms-transform: translate(0, 0) scale(1, 1);
+	transform: translate(0, 0) scale(1, 1);
+	opacity: 1
+}
+#search input[type=search] {
+	font-size: 39px;
+    font-weight: 300;
+    border: 0;
+    padding: .25em .4em;
+    outline: 0;
+}
+#search form button {
+	font-size: 34px;
+	line-height: 0;
+	padding: 20px;
+	vertical-align: top
+}
+#search .close {
+	position: fixed;
+	top: 30px;
+	right: 30px;
+	color: #fff;
+	font-size: 4em
+}
+.post {
+	background-size: 100% auto;
+	background-position: center top;
+	transition: background-size .5s ease-out;
+	-moz-transition: background-size .5s ease-out;
+	-ms-transition: background-size .5s ease-out;
+	-o-transition: background-size .5s ease-out;
+	-webkit-transition: background-size .5s ease-out
+}
+.col-md-6 .post {
+	height: 280px;
+	margin-left: 0
+}
+.col-lg-3 .post {
+	height: 166px
+}
+.col-lg-3 .post-title {
+	font-size: 1.2em
+}
+.post:hover {
+	background-size: 103% auto
+}
+.post .category a {
+	position: absolute;
+	top: 0;
+	right: 10px;
+	background: #fffd;
+	padding: 3px 8px;
+	font-size: .8em;
+	color: #555;
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: .7px
+}
+.post-title {
+	display: block;
+	height: 100%;
+	color: #fff;
+	font-size: 1.6em
+}
+.post-title span {
+	width: 100%;
+	padding: 50px 19px 15px 17px;
+	position: absolute;
+	bottom: 0;
+	background: -moz-linear-gradient(top, transparent 0, rgba(0, 0, 0, .65) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, transparent), color-stop(100%, rgba(0, 0, 0, .65)));
+	background: -webkit-linear-gradient(top, transparent 0, rgba(0, 0, 0, .65) 100%);
+	background: -o-linear-gradient(top, transparent 0, rgba(0, 0, 0, .65) 100%);
+	background: -ms-linear-gradient(top, transparent 0, rgba(0, 0, 0, .65) 100%);
+	background: linear-gradient(to bottom, transparent 0, rgba(0, 0, 0, .65) 100%)
+}
+article h2 {
+	margin-top: 1em
+}
+article h2 strong {
+	font-weight: inherit
+}
+article p {
+	font-size: 1.2rem
+}
+article a img {
+	width: 100%
+}
+article img {
+	max-width: 100%;
+	height: auto;
+	margin: auto;
+	display: block
+}
+article figcaption {
+	text-align: center;
+	font-style: italic
+}
+.post a:hover,
+article .entry-footer {
+	color: var(--main-color)
+}
+#sidebar {
+	z-index: 100
+}
+#sidebar .recent-post div {
+	margin-left: 15px
+}
+#sidebar .recent-post a span {
+	color: #000;
+	font-size: 1.2rem
+}
+#sidebar .recent-post .category {
+	font-size: .8rem;
+	text-transform: uppercase
+}
+.archive-meta {
+	color: #aaa
+}
+#footer {
+	background-color: #1f2333
+}
+#footer-logo {
+	height: 40px;
+	filter: grayscale(100%) brightness(5)
+}
+#footer ul li a {
+	color: #eee
+}
+#footer form input {
+	width: 100%;
+	border-radius: 0
+}
+#footer form button {
+	position: absolute;
+	right: 15px;
+	border-radius: 0
+}
+#fore-subscribe {
+	z-index: 1000000;
+	bottom: 0;
+	position: fixed;
+	color: #808090;
+	opacity: 0;
+	transition: opacity 1s
+}
+#fore-subscribe.fade {
+	opacity: 1
+}
+#fore-subscribe form {
+	background: #fff;
+	position: absolute;
+	bottom: 15px;
+	left: 15px;
+	text-align: center;
+	width: 320px;
+	padding: 35px 30px 30px;
+	border-radius: 15px;
+	box-shadow: 0 5px 25px -5px #00428770
+}
+#fore-subscribe label {
+	font: 21px/1.5 serif;
+	display: inline-block;
+	max-width: 100%;
+	margin: 0
+}
+#fore-subscribe input {
+	border-width: 0 0 3px 0;
+	border-color: #e4e4ea;
+	width: 100%;
+	text-align: center;
+	margin: 20px 0;
+	padding: 7px 0;
+	box-shadow: none
+}
+#fore-subscribe input::placeholder {
+	color: #bdbdca
+}
+#fore-subscribe button {
+	padding: 10px 40px;
+	border-radius: 5px;
+	border: 0;
+	color: #fff;
+	letter-spacing: .3px;
+	background: var(--main-color)
+}
+#fore-subscribe .underline {
+	text-decoration: none;
+	background-image: linear-gradient(to left, #fae3de, #ffe8f8);
+	background-position: 0 100%;
+	background-repeat: no-repeat;
+	background-size: 0 15px;
+	transition: background-size 2s
+}
+#fore-subscribe .underline.active {
+	background-size: 100% 8px
+}
+#fore-subscribe span.close {
+	position: absolute;
+	top: 10px;
+	left: calc(50% + 122px);
+	cursor: pointer;
+	color: #dccece
+}
+@media screen and (max-width: 768px) {
+	.main-page .col-lg-3 .row {
+		background-color: var(--main-color);
+		padding: 15px;
+		margin: 0 -25px
+	}
+}
+@media screen and (min-width: 769px) {
+	.current-menu-item,
+	.navbar-nav>.menu-item:hover {
+		border-bottom: 2px solid var(--main-color)
+	}
+}
+a.wp-block-button__link {
+	background-color: var(--main-color);
+	color: #fff;
+	font-weight: 700;
+	font-size: 18px;
+	padding: 10px 20px;
+	display: inline-block;
+	border-radius: 5px;
+	margin-left: calc(50% - 50px)
+}
+.sticky-ad {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   text-align: center;
+   z-index: 999999;
+}
+@media screen and (max-width: 992px){
+	#div-gpt-ad-top,
+	#div-gpt-ad-mid,
+	#div-gpt-ad-bottom {
+	    margin-left: -15px;
+	}
+}
+.menu-item-has-children {position: relative;display: inline-block;}
+.sub-menu {
+	display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.menu-item-has-children:hover .sub-menu {
+	display: block;
+}
